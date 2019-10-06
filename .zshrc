@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh
 #
-export PATH="$PATH:/Users/przemek/Library/Python/3.7/bin:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/rabbitmq/sbin"
+export PATH="$PATH:/Users/przemek/Library/Python/3.7/bin:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/rabbitmq/sbin:$HOME/bin:/usr/local/bin:/sbin:/usr/sbin"
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/'
 export PLANTUML_JAR='/Users/przemek/bin/plantuml/plantuml.jar'
 export GRAPHVIZ_DOT='/usr/local/bin/dot'
