@@ -68,7 +68,7 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf docker-compose virtualenv bgnotify)
+plugins=(git fzf docker-compose virtualenv bgnotify zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -134,6 +134,4 @@ alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 sobieconfig config --local status.showUntrackedFiles no
 
 
-# This should be last
-source /Users/przemek/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /Users/przemek/.iterm2_shell_integration.zsh
