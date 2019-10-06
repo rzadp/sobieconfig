@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/pi/.oh-my-zsh"
+export ZSH="/Users/przemek/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fzf docker-compose virtualenv bgnotify)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,8 +96,44 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias ohmyzsh="mate ~/.oh-my-zsh
+#
+export PATH="$PATH:/Users/przemek/Library/Python/3.7/bin:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/rabbitmq/sbin"
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/'
+export PLANTUML_JAR='/Users/przemek/bin/plantuml/plantuml.jar'
+export GRAPHVIZ_DOT='/usr/local/bin/dot'
+
+autoload -U promptinit; promptinit
+prompt pure
+
+export RPROMPT_X="%D{%f.%m.%Y %H:%M:%S}"
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+local virtualenv=$(virtualenv_prompt_info)
+export PROMPT='%D{%H:%M} $(virtualenv_prompt_info)${ret_status}%{$reset_color%}'
+
+alias zshrc="code -nw ~/.zshrc && source ~/.zshrc"
+alias docker_clear='docker kill $(docker ps -q); docker rm $(docker ps -a -q)'
+
+nvm_load() {
+  export NVM_DIR="/Users/przemek/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+}
+nvm_load
+
+eval $(thefuck --alias)
+alias f="fuck"
+
+ul() {
+  cd ~/Projects/UniversalLoginSDK
+  local prefix="universal-login-"
+  [ -z $1 ] && { ls | grep $prefix | sed -e "s/^$prefix//" } || cd $prefix$1
+}
 
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 sobieconfig config --local status.showUntrackedFiles no
+
+
+# This should be last
+source /Users/przemek/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /Users/przemek/.iterm2_shell_integration.zsh
