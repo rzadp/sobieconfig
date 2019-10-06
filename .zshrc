@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/przemek/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,9 +98,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh
 #
-export PATH="$PATH:/Users/przemek/Library/Python/3.7/bin:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/rabbitmq/sbin:$HOME/bin:/usr/local/bin:/sbin:/usr/sbin"
+export PATH="$PATH:$HOME/Library/Python/3.7/bin:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/rabbitmq/sbin:$HOME/bin:/usr/local/bin:/sbin:/usr/sbin"
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/'
-export PLANTUML_JAR='/Users/przemek/bin/plantuml/plantuml.jar'
+export PLANTUML_JAR="$HOME/bin/plantuml/plantuml.jar"
 export GRAPHVIZ_DOT='/usr/local/bin/dot'
 
 autoload -U promptinit; promptinit
@@ -115,7 +115,7 @@ alias zshrc="code -nw ~/.zshrc && source ~/.zshrc"
 alias docker_clear='docker kill $(docker ps -q); docker rm $(docker ps -a -q)'
 
 nvm_load() {
-  export NVM_DIR="/Users/przemek/.nvm"
+  export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 }
 nvm_load
@@ -132,6 +132,3 @@ ul() {
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 sobieconfig config --local status.showUntrackedFiles no
-
-
-# source /Users/przemek/.iterm2_shell_integration.zsh
