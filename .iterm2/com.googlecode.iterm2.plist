@@ -62,9 +62,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>402 207 599 519 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>404 191 796 486 0 0 1680 1027 </string>
+	<string>404 283 796 486 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>236 106 850 730 0 0 1680 1027 </string>
+	<string>219 181 850 730 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>298 260 843 645 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1428,7 +1428,7 @@
 	<key>PrefsCustomFolder</key>
 	<string>/Users/przemek/.iterm2</string>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
