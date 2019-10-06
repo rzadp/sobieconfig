@@ -105,11 +105,6 @@ export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home
 export PLANTUML_JAR="$HOME/bin/plantuml/plantuml.jar"
 export GRAPHVIZ_DOT='/usr/local/bin/dot'
 
-export RPROMPT_X="%D{%f.%m.%Y %H:%M:%S}"
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-local virtualenv=$(virtualenv_prompt_info)
-export PROMPT='%D{%H:%M} $(virtualenv_prompt_info)${ret_status}%{$reset_color%}'
-
 alias zshrc="code -nw ~/.zshrc && source ~/.zshrc"
 alias docker_clear='docker kill $(docker ps -q); docker rm $(docker ps -a -q)'
 
@@ -121,6 +116,11 @@ nvm_load
 
 autoload -U promptinit; promptinit
 prompt pure
+
+export RPROMPT_X="%D{%f.%m.%Y %H:%M:%S}"
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+local virtualenv=$(virtualenv_prompt_info)
+export PROMPT='%D{%H:%M} $(virtualenv_prompt_info)${ret_status}%{$reset_color%}'
 
 eval $(thefuck --alias)
 alias f="fuck"
