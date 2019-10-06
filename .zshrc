@@ -105,9 +105,6 @@ export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home
 export PLANTUML_JAR="$HOME/bin/plantuml/plantuml.jar"
 export GRAPHVIZ_DOT='/usr/local/bin/dot'
 
-autoload -U promptinit; promptinit
-prompt pure
-
 export RPROMPT_X="%D{%f.%m.%Y %H:%M:%S}"
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 local virtualenv=$(virtualenv_prompt_info)
@@ -121,6 +118,9 @@ nvm_load() {
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 }
 nvm_load
+
+autoload -U promptinit; promptinit
+prompt pure
 
 eval $(thefuck --alias)
 alias f="fuck"
