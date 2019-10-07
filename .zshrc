@@ -131,6 +131,13 @@ ul() {
   [ -z $1 ] && { ls | grep $prefix | sed -e "s/^$prefix//" } || cd $prefix$1
 }
 
+function _ul() {
+  local prefix="universal-login-"
+  compadd $(ls ~/Projects/UniversalLoginSDK | grep $prefix | sed -e "s/^$prefix//")
+}
+
+compdef _ul ul
+
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 sobieconfig config --local status.showUntrackedFiles no
