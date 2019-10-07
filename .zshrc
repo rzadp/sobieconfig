@@ -124,6 +124,7 @@ export PROMPT='%D{%H:%M} $(virtualenv_prompt_info)${ret_status}%{$reset_color%}'
 
 eval $(thefuck --alias)
 alias f="fuck"
+alias fy="fuck --yeah"
 
 ul() {
   cd ~/Projects/UniversalLoginSDK
