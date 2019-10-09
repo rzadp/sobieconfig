@@ -1,5 +1,10 @@
 export LC_CTYPE=en_US.UTF-8
 
+if [[ $(hostname) = "przemek-desktop" ]]; then
+  export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH
+  export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -138,7 +143,6 @@ function _ul() {
   local prefix="universal-login-"
   compadd $(ls ~/Projects/UniversalLoginSDK | grep $prefix | sed -e "s/^$prefix//")
 }
-
 compdef _ul ul
 
 
