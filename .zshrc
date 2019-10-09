@@ -144,5 +144,5 @@ compdef _ul ul
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 sobieconfig config --local status.showUntrackedFiles no
-sobieconfig pull
+sobieconfig pull --quiet
 alias sobieconfig_push='sobieconfig add -u && sobieconfig commit -m "sobieconfig" && sobieconfig push'
