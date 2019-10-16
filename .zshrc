@@ -18,6 +18,8 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c6c6c6"
 
+ZLE_SPACE_SUFFIX_CHARS=$'|&' # https://unix.stackexchange.com/questions/174630/keep-the-space-after-completion-for-some-characters-in-zsh
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -145,6 +147,11 @@ function _ul() {
   compadd $(ls ~/Projects/UniversalLoginSDK | grep $prefix | sed -e "s/^$prefix//")
 }
 compdef _ul ul
+
+function topup() {
+  command -v universal-login || { ul; yarn link; }
+  universal-login send $1 1
+}
 
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
