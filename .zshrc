@@ -154,7 +154,7 @@ function topup() {
 }
 
 alias ci='hub ci-status -v'
-alias pr='hub pr list -f "  %pC%i%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
+alias pr='hub pr list -f "  %pC#: %I%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
 
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
