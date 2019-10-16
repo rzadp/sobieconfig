@@ -127,7 +127,7 @@ nvm_load
 autoload -U promptinit; promptinit
 prompt pure
 
-export RPROMPT_X="%D{%f.%m.%Y %H:%M:%S}"
+export RPROMPT=''
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 local virtualenv=$(virtualenv_prompt_info)
 export PROMPT='%D{%H:%M} $(virtualenv_prompt_info)${ret_status}%{$reset_color%}'
@@ -152,6 +152,9 @@ function topup() {
   command -v universal-login || { ul; yarn link; }
   universal-login send $1 1
 }
+
+alias ci='hub ci-status -v'
+alias pr='hub pr list -f "  %pC%i%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
 
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
