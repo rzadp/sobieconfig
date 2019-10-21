@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AlternateMouseScroll</key>
-	<true/>
+	<false/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -76,7 +76,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>897 1677 796 473 -474 1050 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>317 239 850 663 0 0 1680 1027 </string>
+	<string>154 228 850 663 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 297 850 730 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1459,7 +1459,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>F14B08DE-3CBF-411C-A08E-A1EEC2E090F9</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>3</integer>
+	<integer>5</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2194,6 +2194,8 @@
 	</dict>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>.local/bin</string>
+		<string>.local/bn</string>
 		<string>liga</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
