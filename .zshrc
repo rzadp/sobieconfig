@@ -138,7 +138,7 @@ alias fy="fuck --yeah"
 
 function tb() {
   cd ~/Projects/badminton-monorepo/badminton/training/logs
-  [ -z $1 ] && tensorboard --logdir "$1" || ls
+  [ ! -z $1 ] && tensorboard --logdir "$1" || ls
 }
 
 ul() {
