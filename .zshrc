@@ -39,7 +39,7 @@ nvm_load() {
   [[ -n $SSH_CONNECTION ]] && NVM_OPTION="--no-use" 
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" "$NVM_OPTION"  # This loads nvm
 }
-[[ -z $SSH_CONNECTION ]] && nvm_load
+nvm_load
 
 autoload -U promptinit; promptinit
 prompt pure
