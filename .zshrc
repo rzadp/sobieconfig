@@ -1,3 +1,7 @@
+alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
+sobieconfig config --local status.showUntrackedFiles no
+alias sobieconfig_push='sobieconfig add -u && sobieconfig commit -m "sobieconfig" && sobieconfig push'
+
 if [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
   sobieconfig pull --recurse-submodules --quiet
   tmux new-session -A -s sobietmux
@@ -78,8 +82,3 @@ function topup() {
 
 alias ci='hub ci-status -v'
 alias pr='hub pr list -f "  %pC#: %I%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
-
-
-alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
-sobieconfig config --local status.showUntrackedFiles no
-alias sobieconfig_push='sobieconfig add -u && sobieconfig commit -m "sobieconfig" && sobieconfig push'
