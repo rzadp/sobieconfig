@@ -65,7 +65,7 @@ function tb() {
 ul() {
   cd ~/Projects/UniversalLoginSDK
   local prefix="universal-login-"
-  [ -z $1 ] && { ls | grep $prefix | sed -e "s/^$prefix//" } || cd $prefix$1
+  [ -z $1 ] && { ls | grep $prefix | sed -e "s/^$prefix//" } || { cd $prefix$1; shift; "$@" }
 }
 
 function _ul() {
