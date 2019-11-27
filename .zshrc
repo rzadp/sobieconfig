@@ -62,6 +62,21 @@ function tb() {
   [ ! -z $1 ] && tensorboard --logdir "$1" || ls
 }
 
+monorepo_util() { # $1: path, $2: prefix, $3: arg
+  cd $1
+  [ -z $3 ] || [ ! -d $2$3 ] && { ls | grep $2 | sed -e "s/^$2//" } || cd $2$3
+}
+monorepo_completion() { # $1: path, $2: prefix
+  compadd $(ls $1 | grep $2 | sed -e "s/^$2//")
+}
+op() {
+  monorepo_util ~/Projects/oasis-pro "oasis-pro-" $1
+}
+_op() {
+  monorepo_completion ~/Projects/oasis-pro "oasis-pro-"
+}
+compdef _op op
+
 ul() {
   cd ~/Projects/UniversalLoginSDK
   local prefix="universal-login-"
