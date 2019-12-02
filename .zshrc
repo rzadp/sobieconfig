@@ -56,6 +56,7 @@ eval $(thefuck --alias)
 alias f="fuck"
 alias fy="fuck --yeah"
 alias yb="yarn build"
+alias ylf="yarn lint --fix"
 
 function tb() {
   cd ~/Projects/badminton-monorepo/badminton/training/logs
@@ -70,10 +71,10 @@ monorepo_completion() { # $1: path, $2: prefix
   compadd $(ls $1 | grep $2 | sed -e "s/^$2//")
 }
 op() {
-  monorepo_util ~/Projects/oasis-pro "oasis-pro-" $1
+  monorepo_util ~/Projects/ats-demo-monorepo "oasis-pro-" $1
 }
 _op() {
-  monorepo_completion ~/Projects/oasis-pro "oasis-pro-"
+  monorepo_completion ~/Projects/ats-demo-monorepo "oasis-pro-"
 }
 compdef _op op
 
