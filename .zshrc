@@ -57,6 +57,7 @@ alias f="fuck"
 alias fy="fuck --yeah"
 alias yb="yarn build"
 alias ylf="yarn lint --fix"
+alias ylfp='yarn lint --fix; git add -u && git commit -m "Lint" && git push'
 
 function tb() {
   cd ~/Projects/badminton-monorepo/badminton/training/logs
@@ -77,6 +78,12 @@ _op() {
   monorepo_completion ~/Projects/ats-demo-monorepo "oasis-pro-"
 }
 compdef _op op
+opdrop() {
+  psql -c "drop database oasis_pro_development;"
+  psql -c "drop database oasis_pro_testing;"
+  psql -c "create database oasis_pro_development;"
+  psql -c "create database oasis_pro_testing;"
+}
 
 ul() {
   cd ~/Projects/UniversalLoginSDK
@@ -98,3 +105,4 @@ function topup() {
 
 alias ci='hub ci-status -v'
 alias pr='hub pr list -f "  %pC#: %I%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
+alias prune="(git checkout -q origin/master || git checkout -q origin/dev); git fetch -p && git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
