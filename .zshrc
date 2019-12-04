@@ -13,7 +13,10 @@ else
   alias zshrc="code -nw ~/.zshrc && source ~/.zshrc"
 fi
 
+
 export PATH="$HOME/.yarn/bin:/opt/bin:$PATH:/snap/bin:$HOME/Library/Python/3.7/bin:$HOME/.local/bin:$HOME/.local/lib/python3.5/site-packages:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/rabbitmq/sbin:$HOME/bin:/usr/local/bin:/sbin:/usr/sbin:$HOME/.zsh/pure"
+export PATH="/opt/bin:$HOME/.gem/ruby/2.6.0/bin:$PATH:/snap/bin:$HOME/Library/Python/3.7/bin:$HOME/.local/bin:$HOME/.local/lib/python3.5/site-packages:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/rabbitmq/sbin:$HOME/bin:/usr/local/bin:/sbin:/usr/sbin:$HOME/.zsh/pure"
+
 export LC_CTYPE=en_US.UTF-8
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -56,11 +59,27 @@ eval $(thefuck --alias)
 alias f="fuck"
 alias fy="fuck --yeah"
 alias yb="yarn build"
+alias ylf="yarn lint --fix"
 
 function tb() {
   cd ~/Projects/badminton-monorepo/badminton/training/logs
   [ ! -z $1 ] && tensorboard --logdir "$1" || ls
 }
+
+monorepo_util() { # $1: path, $2: prefix, $3: arg
+  cd $1
+  [ -z $3 ] || [ ! -d $2$3 ] && { ls | grep $2 | sed -e "s/^$2//" } || cd $2$3
+}
+monorepo_completion() { # $1: path, $2: prefix
+  compadd $(ls $1 | grep $2 | sed -e "s/^$2//")
+}
+op() {
+  monorepo_util ~/Projects/ats-demo-monorepo "oasis-pro-" $1
+}
+_op() {
+  monorepo_completion ~/Projects/ats-demo-monorepo "oasis-pro-"
+}
+compdef _op op
 
 ul() {
   cd ~/Projects/UniversalLoginSDK
