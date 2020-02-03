@@ -2,6 +2,8 @@ alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 sobieconfig config --local status.showUntrackedFiles no
 alias sobieconfig_push='sobieconfig add -u && sobieconfig commit -m "sobieconfig" && sobieconfig push'
 
+alias sc='shellcheck'
+
 if [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
   tmux new-session -A -s sobietmux
   exit # Exit because all the following stuff will be loaded when creating the new tmux session
