@@ -65,7 +65,7 @@ alias f="fuck"
 alias fy="fuck --yeah"
 alias yb="yarn build"
 alias ylf="yarn lint --fix"
-alias ylfp='yarn lint --fix; git add -u && git commit -m "Lint" && git push'
+alias ylfp='yarn lint --fix && git add -u && git commit -m "Lint" && git push'
 
 function tb() {
   cd ~/Projects/badminton-monorepo/badminton/training/logs
