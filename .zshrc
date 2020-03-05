@@ -66,6 +66,7 @@ alias fy="fuck --yeah"
 alias yb="yarn build"
 alias ylf="yarn lint --fix"
 alias ylfp='yarn lint --fix && git add -u && git commit -m "Lint" && git push'
+alias yif='yarn install --frozen-lockfile'
 
 function tb() {
   cd ~/Projects/badminton-monorepo/badminton/training/logs
