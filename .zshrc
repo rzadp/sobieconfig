@@ -64,6 +64,7 @@ eval $(thefuck --alias)
 alias f="fuck"
 alias fy="fuck --yeah"
 alias yb="yarn build"
+alias yt="yarn test"
 alias ylf="yarn lint --fix"
 alias ylfp='yarn lint --fix && git add -u && git commit -m "Lint" && git push'
 
