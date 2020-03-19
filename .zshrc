@@ -115,6 +115,6 @@ function topup() {
 
 alias ci='hub ci-status -v'
 alias pr='hub pr list -f "  %pC#: %I%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
-alias prune="(git checkout -q origin/master || git checkout -q origin/dev); git fetch -p && git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
+alias prune="git fetch -p && (git checkout -q origin/master || git checkout -q origin/dev); git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
 
 source /Users/przemek/Library/Preferences/org.dystroy.broot/launcher/bash/br
