@@ -5,7 +5,7 @@
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AlternateMouseScroll</key>
-	<false/>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -78,9 +78,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>897 1677 796 473 -474 1050 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>840 1 836 513 0 0 1680 1027 </string>
+	<string>343 179 850 663 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>285 343 850 663 0 0 1680 1027 </string>
+	<string>596 154 850 663 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>233 78 850 730 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1742,7 +1742,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>echo "My address is 0x326EDF692334ABFF5b1e98Dd66B933016DF45388 and my private key is 0x 96edb5d7326abe111cd1eeef4c232cddeb3c9addb05b93bee72623c4f737c4f5"</string>
+			<string>echo "My address is 0x326EDF692334ABFF5b1e98Dd66B933016DF45388 and my private key is 0x96edb5d7326abe111cd1eeef4c232cddeb3c9addb05b93bee72623c4f737c4f5"</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -2163,7 +2163,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/przemek/Projects</string>
+			<string>/Users/przemek/Projects/gnt2/deployment</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -2470,7 +2470,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>echo "My address is 0x22EcD7CB1D4C1aBad145C52D16B6c941C79B1594 and my private key is 0x 7dc15f18f9a86fddfeb7d7d06083db2d88db8e1565de83870546b2adffd776d8"</string>
+			<string>echo "My address is 0x22EcD7CB1D4C1aBad145C52D16B6c941C79B1594 and my private key is 0x7dc15f18f9a86fddfeb7d7d06083db2d88db8e1565de83870546b2adffd776d8"</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -2891,7 +2891,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/przemek/Projects</string>
+			<string>/Users/przemek/Projects/gnt2/deployment</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -3198,7 +3198,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>echo "My address is 0xA573AA088e9905F05248e6F05052fF6C65C86a07 and my private key is 0x d3110ef02d52636764283020881876ad3fa724aaeaeb575c929b9dc3e6d54c84"</string>
+			<string>echo "My address is 0xA573AA088e9905F05248e6F05052fF6C65C86a07 and my private key is 0xd3110ef02d52636764283020881876ad3fa724aaeaeb575c929b9dc3e6d54c84"</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -3619,7 +3619,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/przemek/Projects</string>
+			<string>/Users/przemek/Projects/gnt2/deployment</string>
 		</dict>
 	</array>
 	<key>NoSyncAllAppVersions</key>
@@ -3654,7 +3654,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>F14B08DE-3CBF-411C-A08E-A1EEC2E090F9</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>19</integer>
+	<integer>20</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
