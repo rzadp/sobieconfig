@@ -25,13 +25,6 @@ export PATH="/opt/bin:$HOME/.gem/ruby/2.6.0/bin:$PATH:/snap/bin:$HOME/Library/Py
 export LC_CTYPE=en_US.UTF-8
 export ZSH="$HOME/.oh-my-zsh"
 
-if [[ $(hostname) = "przemek-desktop" ]]; then
-  # cuda stuff
-  export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH
-  export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-fi
-
-
 plugins=(git fzf docker-compose virtualenv bgnotify zsh-syntax-highlighting zsh-autosuggestions github)
 ZSH_THEME=""
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c6c6c6"
@@ -68,11 +61,6 @@ alias yt="yarn test"
 alias ylf="yarn lint --fix"
 alias ylfp='yarn lint --fix && git add -u && git commit -m "Lint" && git push'
 alias yif='yarn install --frozen-lockfile'
-
-function tb() {
-  cd ~/Projects/badminton-monorepo/badminton/training/logs
-  [ ! -z $1 ] && tensorboard --logdir "$1" || ls
-}
 
 monorepo_util() { # $1: path, $2: prefix, $3: arg
   cd $1
