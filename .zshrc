@@ -15,6 +15,10 @@ else
   alias zshrc="code -nw ~/.zshrc && source ~/.zshrc"
 fi
 
+export VISUAL="code -nw"
+export EDITOR="nano"
+export GIT_EDITOR="nano"
+
 #https://github.com/NixOS/nix/issues/2925#issuecomment-499799055
 export NIX_IGNORE_SYMLINK_STORE=1
 
