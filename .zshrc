@@ -1,4 +1,4 @@
-source ./.profile
+source $HOME/.profile
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 sobieconfig config --local status.showUntrackedFiles no
