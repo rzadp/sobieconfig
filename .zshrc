@@ -19,7 +19,8 @@ fi
 
 export VISUAL="code -nw"
 export EDITOR="nano"
-export GIT_EDITOR="nano"
+export GIT_EDITOR="/Applications/Komet.app/Contents/MacOS/Komet"
+git config --global core.editor "/Applications/Komet.app/Contents/MacOS/Komet"
 
 #https://github.com/NixOS/nix/issues/2925#issuecomment-499799055
 export NIX_IGNORE_SYMLINK_STORE=1
@@ -67,8 +68,6 @@ alias yt="yarn test"
 alias ylf="yarn lint --fix"
 alias ylfp='yarn lint --fix && git add -u && git commit -m "Lint" && git push'
 alias yif='yarn install --frozen-lockfile'
-
-git config --global core.editor "/Applications/Komet.app/Contents/MacOS/Komet"
 
 monorepo_util() { # $1: path, $2: prefix, $3: arg
   cd $1
