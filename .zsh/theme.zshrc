@@ -22,7 +22,7 @@ for plugin ($plugins); do
   fi
 done
 
-fpath+=~/.zsh/pure
+fpath+=~/.zsh/plugins/pure
 autoload -U promptinit; promptinit
 ( prompt -l | grep -q pure ) && prompt pure || echo "Consider installing 'pure' prompt"
 
