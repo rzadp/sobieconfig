@@ -1,13 +1,18 @@
 export PLUGINS_DIR=~/.zsh/plugins
 
-plugins=(git fzf docker-compose virtualenv bgnotify zsh-syntax-highlighting zsh-autosuggestions github)
+
 ZSH_THEME=""
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c6c6c6"
 ZLE_SPACE_SUFFIX_CHARS=$'|&' # https://unix.stackexchange.com/questions/174630/keep-the-space-after-completion-for-some-characters-in-zsh
 
 # source $ZSH/oh-my-zsh.sh
 
-# Load all of the plugins that were defined in ~/.zshrc
+# Load selected libs from ohmyzsh
+source $PLUGINS_DIR/ohmyzsh/lib/key-bindings.zsh
+source $PLUGINS_DIR/ohmyzsh/lib/completion.zsh
+
+# Load all of the plugins
+plugins=(git fzf docker-compose virtualenv bgnotify zsh-syntax-highlighting zsh-autosuggestions github)
 for plugin ($plugins); do
   if [ -f $PLUGINS_DIR/$plugin/$plugin.plugin.zsh ]; then
     source $PLUGINS_DIR/$plugin/$plugin.plugin.zsh
