@@ -1,4 +1,4 @@
-if [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
+if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
   # always have a tmux over ssh to make sure connections stays lest there is network issue
   tmux new-session -A -s sobietmux
   exit # Exit because all the following stuff will be loaded when creating the new tmux session
