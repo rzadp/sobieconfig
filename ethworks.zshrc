@@ -1,5 +1,3 @@
-autoload -U compaudit compinit
-
 monorepo_util() { # $1: path, $2: prefix, $3: arg
   cd $1
   [ -z $3 ] || [ ! -d $2$3 ] && { ls | grep $2 | sed -e "s/^$2//" } || cd $2$3
