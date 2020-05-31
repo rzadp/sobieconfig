@@ -7,3 +7,6 @@
 [submodule ".zsh/plugins/ohmyzsh"]
 	path = .zsh/plugins/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "/home/pi/.zsh/plugins/pure"]
+	path = /home/pi/.zsh/plugins/pure
+	url = https://github.com/sindresorhus/pure.git
