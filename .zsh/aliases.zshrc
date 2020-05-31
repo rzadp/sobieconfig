@@ -7,7 +7,7 @@ else
   alias zshrc="code -nw ~/.zshrc && source ~/.zshrc"
 fi
 
-( command -v shellcheck > /dev/null ) && alias sc='shellcheck' || echo "Consider installing shellcheck"
+alias sc='shellcheck'
 
 alias docker_clear='docker kill $(docker ps -q); docker rm $(docker ps -a -q)'
 
