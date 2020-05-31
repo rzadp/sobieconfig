@@ -7,10 +7,9 @@ ZLE_SPACE_SUFFIX_CHARS=$'|&' # https://unix.stackexchange.com/questions/174630/k
 source $ZSH/oh-my-zsh.sh
 
 autoload -U promptinit; promptinit
-prompt pure
+( prompt -l | grep -q pure ) && prompt pure || echo "Consider installing 'pure' prompt"
 
 export RPROMPT=''
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 local virtualenv=$(virtualenv_prompt_info)
 export PROMPT='%D{%H:%M} $(virtualenv_prompt_info)${ret_status}%{$reset_color%}'
-

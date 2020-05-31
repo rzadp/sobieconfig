@@ -11,7 +11,8 @@ fi
 
 alias docker_clear='docker kill $(docker ps -q); docker rm $(docker ps -a -q)'
 
-eval $(thefuck --alias)
+
+
 alias f="fuck"
 alias fy="fuck --yeah"
 alias yb="yarn build"

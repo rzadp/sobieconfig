@@ -8,6 +8,33 @@ export GRAPHVIZ_DOT='/usr/local/bin/dot'
 export LC_CTYPE=en_US.UTF-8 # for some C++ / CUDA stuff
 
 ( command -v broot > /dev/null ) && source /Users/przemek/Library/Preferences/org.dystroy.broot/launcher/bash/br || echo "Consider installing broot"
+( command -v shellcheck > /dev/null ) && eval $(thefuck --alias) || echo "Consider installing thefuck"
+
+lazynvm() {
+  unset -f nvm node npm npx
+  export NVM_DIR=~/.nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+}
+
+nvm() {
+  lazynvm 
+  nvm $@
+}
+ 
+node() {
+  lazynvm
+  node $@
+}
+ 
+npm() {
+  lazynvm
+  npm $@
+}
+
+npx() {
+  lazynvm
+  npx $@
+}
 
 nvm_load() {
   local NVM_OPTION=""
@@ -15,4 +42,4 @@ nvm_load() {
   [[ -n $SSH_CONNECTION ]] && NVM_OPTION="--no-use" 
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" "$NVM_OPTION"  # This loads nvm
 }
-nvm_load
+# nvm_load // disabled in favor of lazy laoding
