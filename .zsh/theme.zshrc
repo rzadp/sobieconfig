@@ -24,6 +24,7 @@ done
 
 fpath+=~/.zsh/plugins/pure
 autoload -U promptinit; promptinit
+autoload colors && colors
 ( prompt -l | grep -q pure ) && prompt pure || echo "Consider installing 'pure' prompt"
 
 export RPROMPT=''
