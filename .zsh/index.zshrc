@@ -11,6 +11,8 @@ export PATH="/opt/bin:$HOME/.gem/ruby/2.6.0/bin:$PATH:/snap/bin:$HOME/Library/Py
 autoload -U compaudit compinit
 autoload -U +X compinit && compinit
 
+setopt HIST_VERIFY
+
 source $HOME/.profile
 
 source ~/.zsh/sobieconfig.zshrc
