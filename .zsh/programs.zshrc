@@ -14,7 +14,7 @@ export LC_CTYPE=en_US.UTF-8 # for some C++ / CUDA stuff
 
 # Might require this hack https://github.com/nvm-sh/nvm/issues/1702#issuecomment-444309875
 lazynvm() {
-  unset -f nvm node npm npx
+  unset -f nvm node npm npx yarn
   export NVM_DIR=~/.nvm
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 }
@@ -37,6 +37,11 @@ npm() {
 npx() {
   lazynvm
   npx $@
+}
+
+yarn() {
+  lazynvm
+  yarn $@
 }
 
 nvm_load() {
