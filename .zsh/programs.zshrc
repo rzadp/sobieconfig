@@ -8,7 +8,7 @@ export GRAPHVIZ_DOT='/usr/local/bin/dot'
 export LC_CTYPE=en_US.UTF-8 # for some C++ / CUDA stuff
 
 ( command -v broot > /dev/null ) && source /Users/przemek/Library/Preferences/org.dystroy.broot/launcher/bash/br || echo "Consider installing broot"
-( command -v shellcheck > /dev/null ) && eval $(thefuck --alias) || echo "Consider installing thefuck"
+( command -v thefuck > /dev/null ) && eval $(thefuck --alias) || echo "Consider installing thefuck"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || echo "Consider installing fzf"
 ( command -v shellcheck > /dev/null ) || echo "Consider installing shellcheck"
 
