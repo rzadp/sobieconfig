@@ -1,10 +1,10 @@
-export VISUAL="code -nw"
 export EDITOR="nano"
 
 if [[ -n $SSH_CONNECTION ]]; then
   alias zshrc="nano ~/.zshrc && source ~/.zshrc"
 else
   alias zshrc="code -nw ~/.zsh && source ~/.zshrc"
+  export VISUAL="code -nw"
 fi
 
 alias sc='shellcheck'
