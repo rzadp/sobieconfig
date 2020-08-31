@@ -11,7 +11,7 @@ source $PLUGINS_DIR/ohmyzsh/lib/key-bindings.zsh
 source $PLUGINS_DIR/ohmyzsh/lib/completion.zsh
 
 # Load all of the plugins
-plugins=(git fzf docker-compose virtualenv bgnotify zsh-syntax-highlighting zsh-autosuggestions github)
+plugins=(fzf docker-compose virtualenv bgnotify zsh-syntax-highlighting zsh-autosuggestions)
 for plugin ($plugins); do
   if [ -f $PLUGINS_DIR/$plugin/$plugin.plugin.zsh ]; then
     source $PLUGINS_DIR/$plugin/$plugin.plugin.zsh
