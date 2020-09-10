@@ -5,3 +5,6 @@ if [[ "$OSTYPE" = darwin* ]]; then
 else
   :
 fi
+
+git config --global user.email "roopert7@gmail.com"
+git config --global user.name "rzadp"
