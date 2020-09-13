@@ -13,3 +13,6 @@
 [submodule ".zsh/plugins/scm_breeze"]
 	path = .zsh/plugins/scm_breeze
 	url = git://github.com/ndbroadbent/scm_breeze.git
+[submodule ".zsh/plugins/fzf"]
+	path = .zsh/plugins/fzf
+	url = https://github.com/junegunn/fzf.git
