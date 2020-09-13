@@ -20,6 +20,8 @@ git() {
 
 alias gc='git commit'
 alias gpsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD 2>/dev/null)'
+alias gst='git status'
+alias gs='git status'
 
 alias ci='hub ci-status -v'
 alias pr='hub pr list -f "  %pC#: %I%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
