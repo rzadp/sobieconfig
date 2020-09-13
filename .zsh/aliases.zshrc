@@ -7,7 +7,7 @@ else
   export VISUAL="code -nw"
 fi
 
-alias sc='shellcheck'
+alias shc='shellcheck'
 
 alias docker_clear='docker kill $(docker ps -q); docker rm $(docker ps -a -q)'
 
@@ -18,12 +18,4 @@ alias yt="yarn test"
 alias ylf="yarn lint --fix"
 alias ylfp='yarn lint --fix && git add -u && git commit -m "Lint" && git push'
 alias yif='yarn install --frozen-lockfile'
-alias gc='git commit'
-
-alias ci='hub ci-status -v'
-alias pr='hub pr list -f "  %pC#: %I%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
-alias prune="git fetch -p && (git checkout -q origin/master || git checkout -q origin/dev); git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
-
-alias gpsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD 2>/dev/null)'
-
 alias y='yarn'

@@ -11,3 +11,21 @@ fi
 
 git config --global user.email "roopert7@gmail.com"
 git config --global user.name "rzadp"
+
+git() {
+  echo "Using git alias"
+  exit -1
+  /usr/bin/git $@
+}
+
+alias gc='git commit'
+alias gpsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD 2>/dev/null)'
+
+alias ci='hub ci-status -v'
+alias pr='hub pr list -f "  %pC#: %I%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
+alias prune="git fetch -p && (git checkout -q origin/master || git checkout -q origin/dev); git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
+
+alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
+alias sc='sobieconfig'
+sobieconfig config --local status.showUntrackedFiles no
+alias sc_push='sobieconfig add -u && sobieconfig commit -m "sobieconfig" && sobieconfig push'

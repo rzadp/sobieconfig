@@ -15,7 +15,6 @@ autoload -U +X compinit && compinit
 
 source $HOME/.profile
 
-source ~/.zsh/sobieconfig.zshrc
 source ~/.zsh/git.zshrc
 source ~/.zsh/aliases.zshrc
 source ~/.zsh/programs.zshrc
