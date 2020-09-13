@@ -19,7 +19,6 @@ source ~/.zsh/sobieconfig.zshrc
 source ~/.zsh/git.zshrc
 source ~/.zsh/aliases.zshrc
 source ~/.zsh/programs.zshrc
-source ~/.zsh/scm_breeze.zshrc
 source ~/.zsh/ethworks.zshrc
 source ~/.zsh/history.zshrc
 source ~/.zsh/theme.zshrc

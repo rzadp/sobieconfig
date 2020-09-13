@@ -10,6 +10,8 @@ ZLE_SPACE_SUFFIX_CHARS=$'|&' # https://unix.stackexchange.com/questions/174630/k
 source $PLUGINS_DIR/ohmyzsh/lib/key-bindings.zsh
 source $PLUGINS_DIR/ohmyzsh/lib/completion.zsh
 
+export FZF_BASE=$PLUGINS_DIR/fzf
+
 # Load all of the plugins
 plugins=(fzf docker-compose virtualenv bgnotify zsh-syntax-highlighting zsh-autosuggestions)
 for plugin ($plugins); do

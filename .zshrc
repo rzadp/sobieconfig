@@ -1,1 +1,2 @@
 source ~/.zsh/index.zshrc
+
