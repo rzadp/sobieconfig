@@ -1,7 +1,8 @@
 #https://github.com/NixOS/nix/issues/2925#issuecomment-499799055
 export NIX_IGNORE_SYMLINK_STORE=1
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/'
+# export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/'
+export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
 export PLANTUML_JAR="$HOME/bin/plantuml/plantuml.jar"
 export GRAPHVIZ_DOT='/usr/local/bin/dot'
 
