@@ -19,3 +19,5 @@ alias ylf="yarn lint --fix"
 alias ylfp='yarn lint --fix && git add -u && git commit -m "Lint" && git push'
 alias yif='yarn install --frozen-lockfile'
 alias y='yarn'
+
+alias dirs='dirs -v'
