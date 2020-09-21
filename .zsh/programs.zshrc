@@ -66,3 +66,17 @@ nvm_load() {
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" "$NVM_OPTION"  # This loads nvm
 }
 # nvm_load // disabled in favor of lazy laoding
+
+function cd
+{
+  if [ $# -eq 0 ]; then
+    # `cd` moves to home dir
+    pushd ~ > /dev/null
+  elif [ " $1" = " -" ]; then
+    # `cd -` moves to previous dir
+    pushd "$OLDPWD" > /dev/null
+  else
+    # `cd with a pushd`
+    pushd "$@" > /dev/null
+  fi
+}

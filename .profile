@@ -1,1 +1,1 @@
-export WIRE_PROFILE=przemek-moon
+export WIRE_PROFILE=przemek
