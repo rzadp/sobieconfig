@@ -10,6 +10,7 @@ fi
 alias shc='shellcheck'
 
 alias docker_clear='docker kill $(docker ps -q); docker rm $(docker ps -a -q)'
+alias dlf='docker logs --follow'
 
 alias f="fuck"
 alias fy="fuck --yeah"
