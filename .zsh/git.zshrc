@@ -11,6 +11,8 @@ fi
 
 git config --global user.email "roopert7@gmail.com"
 git config --global user.name "rzadp"
+git config --global merge.tool vscode
+git config --global merge.vscode.cmd "code --wait $MERGED"
 
 git() {
   echo "Using git alias"
@@ -31,3 +33,6 @@ alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 alias sc='sobieconfig'
 sobieconfig config --local status.showUntrackedFiles no
 alias sc_push='sobieconfig add -u && sobieconfig commit -m "sobieconfig" && sobieconfig push'
+
+alias lg='lazygit'
+alias lsc='lazygit --git-dir=$HOME/sobieconfig --work-tree=$HOME'
