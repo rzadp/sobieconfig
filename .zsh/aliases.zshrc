@@ -22,3 +22,6 @@ alias yif='yarn install --frozen-lockfile'
 alias y='yarn'
 
 alias dirs='dirs -v'
+
+# Search contents of files. rhino <your string>
+alias rhino='grep -rHino '
