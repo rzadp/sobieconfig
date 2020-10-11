@@ -8,7 +8,7 @@ export GRAPHVIZ_DOT='/usr/local/bin/dot'
 
 export LC_CTYPE=en_US.UTF-8 # for some C++ / CUDA stuff
 
-( command -v broot > /dev/null ) && source /Users/przemek/.config/broot/launcher/bash/br || echo "Consider installing broot"
+( command -v broot > /dev/null ) && source $HOME/.config/broot/launcher/bash/br || echo "Consider installing broot"
 ( command -v thefuck > /dev/null ) && eval $(thefuck --alias) || echo "Consider installing thefuck"
 ( command -v shellcheck > /dev/null ) || echo "Consider installing shellcheck"
 
