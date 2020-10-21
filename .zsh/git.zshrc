@@ -27,7 +27,7 @@ alias gs='git status'
 
 alias ci='hub ci-status -v'
 alias pr='hub pr list -f "  %pC#: %I%Creset (by: %au) (reviewing: %rs)  %t%  l%n"'
-alias prune="git fetch -p && (git checkout -q origin/master || git checkout -q origin/dev); git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
+alias prune="git fetch -p && (git checkout -q origin/master || git checkout -q origin/dev || git checkout -q origin/main); git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
 
 alias sobieconfig='/usr/bin/git --git-dir=$HOME/sobieconfig/ --work-tree=$HOME'
 alias sc='sobieconfig'
