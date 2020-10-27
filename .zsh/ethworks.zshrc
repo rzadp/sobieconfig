@@ -36,3 +36,6 @@ function topup() {
   command -v universal-login || { ul; yarn link; }
   universal-login send $1 1
 }
+
+# DXOS pre-commit hook
+export HUSKY_SKIP_INSTALL=1
