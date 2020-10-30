@@ -1,1 +1,4 @@
-set constantshow # display position of cursos
+set constantshow # display position of cursor
+
+set tabsize 2
+set tabstospaces
