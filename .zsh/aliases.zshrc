@@ -25,3 +25,6 @@ alias dirs='dirs -v'
 
 # Search contents of files. rhino <your string>
 alias rhino='grep -rHino '
+
+# https://github.com/microsoft/vscode/issues/105446#issuecomment-727079169
+alias codelag='codesign --remove-signature /Applications/Visual\ Studio\ Code.app/Contents/Frameworks/Code\ Helper\ \(Renderer\).app'
