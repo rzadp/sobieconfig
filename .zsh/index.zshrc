@@ -6,7 +6,7 @@ if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =
   # Exit happe
 fi
 
-if [ [ -n "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
+if [ -n "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
   alias logout='tmux detach'
 fi
 
