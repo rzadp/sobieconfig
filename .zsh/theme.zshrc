@@ -27,7 +27,7 @@ done
 fpath+=~/.zsh/plugins/pure
 autoload -U promptinit; promptinit
 autoload colors && colors
-( prompt -l | grep -q pure ) && prompt pure || echo "Consider installing 'pure' prompt"
+( prompt -l | grep -q pure ) && prompt pure || echo "'pure' prompt installation failed. Updating sobieconfig submodules could help."
 
 export RPROMPT=''
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"

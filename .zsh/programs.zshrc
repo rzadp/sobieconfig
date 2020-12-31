@@ -8,9 +8,8 @@ export GRAPHVIZ_DOT='/usr/local/bin/dot'
 
 export LC_CTYPE=en_US.UTF-8 # for some C++ / CUDA stuff
 
-( command -v broot > /dev/null ) && source $HOME/.config/broot/launcher/bash/br || echo "Consider installing broot"
-( command -v thefuck > /dev/null ) && eval $(thefuck --alias) || echo "Consider installing thefuck"
-( command -v shellcheck > /dev/null ) || echo "Consider installing shellcheck"
+( command -v broot > /dev/null ) && source $HOME/.config/broot/launcher/bash/br
+( command -v thefuck > /dev/null ) && eval $(thefuck --alias)
 
 # Might require this hack https://github.com/nvm-sh/nvm/issues/1702#issuecomment-444309875
 lazynvm() {
