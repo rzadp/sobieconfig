@@ -1,7 +1,13 @@
 if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
   # always have a tmux over ssh to make sure connections stays lest there is network issue
   tmux new-session -A -s sobietmux
+
   exit # Exit because all the following stuff will be loaded when creating the new tmux session
+  # Exit happe
+fi
+
+if [ [ -n "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
+  alias logout='tmux detach'
 fi
 
 export PATH="/usr/local/bin:$HOME/.yarn/bin:/opt/bin:$PATH:/snap/bin:$HOME/Library/Python/3.7/bin:$HOME/.local/bin:$HOME/.local/lib/python3.5/site-packages:/Library/TeX/texbin:/usr/local/bin:/usr/local/opt/rabbitmq/sbin:$HOME/bin:/sbin:/usr/sbin:$HOME/.zsh/pure"
