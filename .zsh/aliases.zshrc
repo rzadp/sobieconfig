@@ -23,8 +23,10 @@ alias y='yarn'
 
 alias dirs='dirs -v'
 
-# Search contents of files. rhino <your string>
-alias rhino='grep -rHino '
+# Search contents of files. rhino <your string> <directory = . >
+rhino() {
+  grep -rHino "$1" "${2:-.}"
+}
 
 # https://github.com/microsoft/vscode/issues/105446#issuecomment-727079169
 alias codelag='codesign --remove-signature /Applications/Visual\ Studio\ Code.app/Contents/Frameworks/Code\ Helper\ \(Renderer\).app'
