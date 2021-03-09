@@ -29,3 +29,5 @@ source ~/.zsh/programs.zshrc
 source ~/.zsh/ethworks.zshrc
 source ~/.zsh/history.zshrc
 source ~/.zsh/theme.zshrc
+
+ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
