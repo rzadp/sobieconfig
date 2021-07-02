@@ -16,6 +16,7 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=$PATH:/Users/przemek/Library/Python/2.7/bin
 export PATH="$PATH:/Users/przemek/Library/Android/sdk/platform-tools"
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
+export PATH="$PATH:$HOME/.nodenv/bin"
 
 # Load all stock functions
 autoload -U compaudit compinit
