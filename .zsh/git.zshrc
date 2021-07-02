@@ -14,11 +14,11 @@ git config --global user.name "rzadp"
 git config --global merge.tool vscode
 git config --global merge.vscode.cmd "code --wait $MERGED"
 
-git() {
-  echo "Using git alias"
-  exit -1
-  /usr/bin/git $@
-}
+# git() {
+#   echo "Using git alias"
+#   exit -1
+#   /usr/bin/git $@
+# }
 
 alias gc='git commit'
 alias gpsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD 2>/dev/null)'

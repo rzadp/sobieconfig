@@ -12,51 +12,51 @@ export LC_CTYPE=en_US.UTF-8 # for some C++ / CUDA stuff
 ( command -v thefuck > /dev/null ) && eval $(thefuck --alias)
 
 # Might require this hack https://github.com/nvm-sh/nvm/issues/1702#issuecomment-444309875
-lazynvm() {
-  unset -f nvm node npm npx yarn git wire ionic
-  export NVM_DIR=~/.nvm
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-}
+# lazynvm() {
+#   unset -f nvm node npm npx yarn git wire ionic
+#   export NVM_DIR=~/.nvm
+#   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+# }
 
-nvm() {
-  lazynvm 
-  nvm $@
-}
+# nvm() {
+#   lazynvm 
+#   nvm $@
+# }
  
-node() {
-  lazynvm
-  node $@
-}
+# node() {
+#   lazynvm
+#   node $@
+# }
  
-npm() {
-  lazynvm
-  npm $@
-}
+# npm() {
+#   lazynvm
+#   npm $@
+# }
 
-npx() {
-  lazynvm
-  npx $@
-}
+# npx() {
+#   lazynvm
+#   npx $@
+# }
 
-yarn() {
-  lazynvm
-  yarn $@
-}
+# yarn() {
+#   lazynvm
+#   yarn $@
+# }
 
-git() {
-  lazynvm
-  git $@
-}
+# git() {
+#   lazynvm
+#   git $@
+# }
 
-wire() {
-  lazynvm
-  wire $@
-}
+# wire() {
+#   lazynvm
+#   wire $@
+# }
 
-ionic() {
-  lazynvm
-  ionic $@
-}
+# ionic() {
+#   lazynvm
+#   ionic $@
+# }
 
 nvm_load() {
   local NVM_OPTION=""
@@ -79,3 +79,5 @@ function cd
     pushd "$@" > /dev/null
   fi
 }
+
+eval "$(nodenv init -)"
