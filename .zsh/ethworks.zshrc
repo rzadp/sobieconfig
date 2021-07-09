@@ -43,3 +43,5 @@ export HUSKY_SKIP_INSTALL=1
 alias wire-local='node ~/Projects/wireline/cli/packages/cli/bin/dx.js'
 
 export PATH="$HOME/.radicle/bin:$PATH"
+
+eval "$(monorepo-cd --init m)"
