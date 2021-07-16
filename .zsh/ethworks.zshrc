@@ -45,3 +45,7 @@ alias wire-local='node ~/Projects/wireline/cli/packages/cli/bin/dx.js'
 export PATH="$HOME/.radicle/bin:$PATH"
 
 eval "$(monorepo-cd --init m)"
+
+rtt() {
+  rushx test -g \'$@\'
+}
